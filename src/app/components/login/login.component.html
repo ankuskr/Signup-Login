@@ -6,19 +6,22 @@
         <div class="horizontal"></div>
         <div class="card-left">
           <div class="data">
-            <form class="form-check">
+            <form [formGroup]="signin" (ngSubmit)="onSubmit(signin)" class="form-check">
               <div class="wlc">
                 <p>Welcome</p>
                 <p>Login to our site</p>
               </div>
               <div class="input-group">
                 <div class="input">
-                  <input class="rounded-2" type="email" placeholder="Enter your username or email" />
-                  <input class="rounded-22" type="password" placeholder="Enter the password" />
+                  <!-- Email Input -->
+                  <input class="rounded-2" type="email" placeholder="Enter your username or email" formControlName="email" />
+            
+                  <!-- Password Input -->
+                  <input class="rounded-22" type="password" placeholder="Enter the password" formControlName="password" />
                 </div>
                 <div class="checkbox">
                   <div class="check">
-                    <input type="checkbox" id="box" /><label for="password">remeber password</label>
+                    <input type="checkbox" id="box" formControlName="remPass" /><label for="password">remeber password</label>
                   </div>
                   <p class="float-right text-decoration-none">
                     Forgot your password?
@@ -81,7 +84,6 @@
     <div class="col-1">
       <div class="vertical"></div>
     </div>
-
     <div class="col-5">
       <div class="right">
         <div class="card-right">
