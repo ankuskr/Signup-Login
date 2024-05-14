@@ -1,36 +1,36 @@
-import { Router} from '@angular/router';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ServiceService } from '../../services/service.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+// import {Storage} from ''
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
 })
 export class SignupComponent {
-  constructor(private service:ServiceService,private router:Router){}
-  user = new FormGroup({
-    name: new FormControl(),
-    email: new FormControl(),
-    password: new FormControl(),
-    phone: new FormControl(),
-  });
-  // onSubmit(data:any) {
-  //   this.service.createUser(data).subscribe((res) => {
-  //     console.log(res);
-  //   });
-    
-  // }
+  cUser: boolean = false;
+  signupUser: any[] = [];
 
-  cUser:boolean = false;
+  userForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    phone: new FormControl(''),
+  });
+
   onSubmit() {
-    localStorage.setItem('user', JSON.stringify(this.user.value));
-    console.log(this.user.value);  
-    this.cUser = true;
-    this.router.navigate(['/signin']);  
+    this.signupUser.push(this.userForm.value);
+    localStorage.setItem('signUp', JSON.stringify(this.signupUser));
+    this.userForm = new FormGroup({
+      name: new FormControl(''),
+      email: new FormControl(''),
+      password: new FormControl(''),
+      phone: new FormControl(''),
+    });
+    console.log("Signup successful");
   }
 }

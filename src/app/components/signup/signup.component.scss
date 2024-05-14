@@ -1,86 +1,224 @@
-*{
-    margin: 0;
-    padding:0;
-}
-body{
-    overflow: auto;
-}
-
-.wrapper {
-  padding: 20px;
-}
-
 .heading {
-  color: rgb(40, 167, 69);
+  margin-top: 45px;
+  color: #056938;
+  font-family: DIN Next LT W23;
+  font-size: 30px;
 }
 
-.containerhhhhhh {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.card-left,
-.card-right {
-  flex: 1;
-}
-
-.card-left {
-  
-  background-color: rgb(232, 254, 243);
-}
-
-.card-body{
-    padding: 20px;
-    padding-right: 20px;
-}
-.card-body-right {
-  padding: 20px;
+.horizontal {
+  margin-top: -7px;
+  width: 41%;
+  height: 3px;
+  margin-left: 0;
+  background: linear-gradient(to right, #056938, #ffffff);
 }
 
 .vertical {
   width: 1.5px;
-  height: 509px;
+  height: 100%;
   margin-left: 20px;
   background-color: rgb(40, 167, 69);
 }
-.btn {
-  background-color: rgb(40, 167, 69); /* Green background color */
-  color: white; /* White text color */
-  border: none; /* Remove button border */
-  padding: 10px 20px; /* Add padding to the button */
-  margin-top: 10px; /* Optional: Adjust top margin */
+
+.card-left {
+  width: 100%;
+  height: 500px;
+  background: #f0fff8;
+  border-radius: 20px 0 0 0;
+  margin-top: 9px;
+  margin-left: -8px;
+  display: flex;
 }
-.form-group {
+
+.wlc {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.form-check {
+  margin-top: 10px;
+  flex-direction: row;
   position: relative;
   margin-bottom: 20px;
 }
 
-.form-group i {
+.btn {
+  background-color: #056938;
+  width: 100%;
+}
+
+.check {
+  float: left;
+  margin-right: 10px;
+  margin-top: -16px;
+}
+
+.float-right {
+  float: right;
+}
+
+.input-group {
+  gap: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 100%;
+  margin-left: 11px;
+  height: 43px;
+}
+
+.userinput {
+  display: flex;
+  flex-direction: column;
+}
+
+.userinput .form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.userinput .form-group input {
+  flex: 1;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: -12px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  position: relative; 
+}
+
+.userinput .form-group i.icon {
   position: absolute;
+  right: 4px; 
+  font-size: 18px;
+  color: #056938;
+}
+
+.userinput .form-group i.fa-user,
+.userinput .form-group i.fa-mobile-button,
+.userinput .form-group i.fa-envelope,
+.userinput .form-group i.fa-eye,
+.userinput .form-group i.fa-lock {
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
-  color: rgb(40, 167, 69);
 }
 
-.form-control {
-  padding-left: 8px;
-  width: 100%;
-  height: 34px;
+.userinput .form-group i.fa-lock {
+  right: 4px;
+  color: #056938;
 }
 
-.checkbox-label {
-  display: inline-block;
-  margin-left: 5px;
+.userinput .form-group i.fa-eye {
+  right: 17px;
+}
+
+.userinput .form-group input[type="password"] {
+  padding-right: 40px;
+}
+
+.checkbox {
+  flex-direction: row;
+  margin-bottom: 0;
 }
 
 .captcha {
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.g-recaptcha {
-  margin-bottom: 20px;
+.captcha .g-recaptcha {
+  display: inline-block;
+  transform: scale(0.85);
+  transform-origin: 0 0;
+}
+
+.captcha .g-recaptcha > div {
+  width: 100% !important;
+  height: auto !important;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.spacel {
+  width: 100%;
+}
+
+.horizontall {
+  height: 1px;
+  margin: 15px 0;
+  width: 100%;
+  background: #056938;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 30%;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.facebook,
+.google,
+.butun {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.facebook i {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #1877f2;
+}
+
+.butun svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffc107;
+  margin-right: 5px;
+}
+
+.right {
+  margin-top: 146px;
+}
+
+.card-right {
+  gap: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.headingtxt,
+.para {
+  font-size: 19px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.vertical {
+  width: 1.5px;
+  height: 84%;
+  margin-top: 94px;
+  background-color: rgb(40, 167, 69);
 }
 
 .data {
@@ -97,22 +235,67 @@ body{
 }
 
 .dog {
-  width: 329px;
-  height: 200px;
-  margin-left: 225px;
+  width: 345px;
+  height: 196px;
+  margin-left: 162px;
 }
 
 .doggy {
   width: 100%;
   height: 100%;
+  margin-top: -21px;
   object-fit: contain;
   object-position: center;
 }
 
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
 
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
+/* Toast container styles */
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Toast styles */
+.toast {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px; /* Set desired width */
+}
+
+/* Close button styles */
+.close-btn {
   font-size: 16px;
+  font-weight: bold;
+  color: #4CAF50;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive styling (optional) */
+@media (max-width: 600px) {
+  .toast {
+    width: 100%; /* Full width on smaller screens */
+  }
 }

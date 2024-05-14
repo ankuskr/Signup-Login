@@ -5,11 +5,12 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './components/todo/todo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,SignupComponent,LoginComponent,NotFoundComponent,HttpClientModule],
+  imports: [RouterOutlet,HomeComponent,SignupComponent,LoginComponent,NotFoundComponent,HttpClientModule,TodoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
