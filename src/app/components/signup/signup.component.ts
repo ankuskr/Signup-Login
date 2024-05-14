@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
   styleUrl: './signup.component.scss',
 })
 export class SignupComponent {
+
+  constructor(private router:Router){}
   cUser: boolean = false;
   signupUser: any[] = [];
 
@@ -31,6 +33,7 @@ export class SignupComponent {
       password: new FormControl(''),
       phone: new FormControl(''),
     });
+    this.router.navigate(['/signin']);
     console.log("Signup successful");
   }
 }
